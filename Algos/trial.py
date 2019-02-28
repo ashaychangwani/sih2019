@@ -7,6 +7,7 @@ Created on Thu Feb 28 10:13:46 2019
 
 import pandas as pd
 import numpy as np
+np.__version__
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import confusion_matrix,accuracy_score
 
