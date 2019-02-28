@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+	  <meta charset="UTF-8">
+		{% load static %}
+		<title></title>
+		<link rel="stylesheet" href="{% static 'css/maintenance.css' %}">
+		<link rel="stylesheet" href="{% static 'css/header.css' %}">
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="logo">gullybois</h1>
+			<div class="header-right">
+				<a class="active head" href="http://127.0.0.1:8000/Home">Home</a>
+				<a class="head" href="http://127.0.0.1:8000/Assets">Asset Register</a>
+				<a class="head" href="http://127.0.0.1:8000/SparesUpKeep">Spares Upkeep</a>
+				<a class="head" href="http://127.0.0.1:8000/MaintenanceLog">Maintenance Log</a>
+				<a class="head" href="http://127.0.0.1:8000/Timetable">Time Table</a>
+				<a class="head" href="http://127.0.0.1:8000/AMCRenewal">AMC Renewal</a>
+				<a class="head" href="http://127.0.0.1:8000/Invoice">Invoice</a>
+				<a class="head" href="http://127.0.0.1:8000/Notifications">Notifications</a>
+				<a class="head" href="http://127.0.0.1:8000/WorkOrder">Work Order</a>
+			</div>
+		</div>
+		<h8>Because Prevention is Better than Cure</h8>
+
+	<div class="container">
+
+		<div class="table">
+			<div class="table-header">
+				<div class="header__item"><a id="name" class="filter__link" href="#">Name</a></div>
+				<div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+				<div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+				<div class="header__item"><a id="time" class="filter__link filter__link--number" href="#">Time</a></div>
+				<div class="header__item"><a id="details" class="filter__link filter__link--number" href="#">Details</a></div>
+				<div class="header__item"><a id="comment" class="filter__link filter__link--number" href="#">Comments</a></div>
+			</div>
+			<div class="table-content">
+					{% for entry in maintenanceLog %}
+						<div class="table-row">
+							<div class="table-data">{{ entry.MachineID }}</div>
+							<div class="table-data">{{ entry.DateStamp }}</div>
+							<div class="table-data">{{ entry.TimeStamp }}</div>
+							<div class="table-data">{{ entry.Details }}</div>
+							<div class="table-data">{{ entry.Comments }}</div>
+						</div>
+					{% endfor %}
+			</div>
+		</div>
+	</div>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script  src="{% static 'js/maintenance.js' %}"></script>
+	</body>
+</html>

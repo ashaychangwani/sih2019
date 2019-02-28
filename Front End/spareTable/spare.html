@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  {% load static %}
+  <title></title>
+  
+      <link rel="stylesheet" href="{% static 'css/spare.css' %}">
+      <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  
+</head>
+
+<body>
+<div class="header">
+  <a href="#default" class="logo">Gully Bois</a>
+  <div class="header-right">
+    <a class="active head" href="#home">Home</a>
+    <a class="head" href="#ar">Asset Register</a>
+    <a class="head" href="#su">Spares Upkeep</a>
+    <a class="head" href="#ml">Maintenance Log</a>
+    <a class="head" href="#tt">Time Table</a>
+    <a class="head" href="#amc">AMC Renewal</a>
+    <a class="head" href="#inv">Invoice</a>
+    <a class="head" href="#nf">Notifications</a>
+  </div>
+    </div>
+<div class="container">
+	
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+			<div class="header__item"><a id="component" class="filter__link filter__link--number" href="#">Component Name</a></div>
+			<div class="header__item"><a id="count" class="filter__link filter__link--number" href="#">Count</a></div>
+		</div>
+		<div class="table-content">
+			<div class="table-row">		
+				<div class="table-data">Tom</div>
+				<div class="table-data">2</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Dick</div>
+				<div class="table-data">1</div>
+				<div class="table-data">1</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Harry</div>
+				<div class="table-data">0</div>
+				<div class="table-data">2</div>
+			</div>
+		</div>	
+	</div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+
+    <script  src="{% static 'js/spare.js' %}"></script>
+
+
+
+
+</body>
+
+</html>

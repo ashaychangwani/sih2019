@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spare Form</title>
+   
+      <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+  <h1>Invoice</h1>
+  <form>
+    <div class="form-group">
+      <label>Invoice No.</label>
+      <input type="number" name="ino" id="ino" placeholder="Enter Invoice No.">
+    </div>
+    <div class="form-group">
+      <label>Customer</label>
+      <input type="text" name="cust" id="cust" placeholder="Enter Customer">
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" name="date" id="date" placeholder="Enter Date">
+    </div>
+    <div class="form-group">
+      <label>Amount</label>
+      <input type="number" name="amt" id="amt" placeholder="Enter Amount">
+    </div>
+    <div class="form-group">
+      <label>Paid</label>
+      <input type="number" name="paid" id="paid" placeholder="Enter Paid">
+    </div>
+    <div class="form-group">
+      <label>Balance</label>
+      <input type="number" name="bal" id="bal" placeholder="Enter Balance">
+    </div>
+    <div class="form-group">
+      <label>Payment Due</label>
+      <input type="date" name="due" id="due" placeholder="Payment Due">
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <input type="text" name="status" id="status" placeholder="Status">
+    </div>
+    <div class="form-group">
+      <label>Entered By</label>
+      <input type="text" name="entry" id="entry" placeholder="Entered By">
+    </div>
+    <input type="submit" name="submit" value="Submit">
+</form>
+</div>
+  
+  
+
+</body>
+
+</html>

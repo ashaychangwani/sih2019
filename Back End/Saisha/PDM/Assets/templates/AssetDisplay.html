@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Asset Register</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Facility Name</th>
+                <th>Factory Number</th>
+                <th>Production Line</th>
+                <th>Machine ID</th>
+                <th>Name</th>
+            </tr>
+            {% for entry in assetReg %}
+                <tr>
+                    <td>{{ entry.FacilityName }}</td>
+                    <td>{{ entry.FactoryNum }}</td>
+                    <td>{{ entry.Prodline }}</td>
+                    <td>{{ entry.MachineID }}</td>
+                    <td>{{ entry.Name }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+
+

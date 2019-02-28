@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Form</title>
+  
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+  <h1>Notification Form</h1>
+  <form>
+    <div class="form-group">
+      <label>Machine ID</label>
+      <input type="text" name="machine" id="machine" placeholder="Enter Machine ID">
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <input type="text" name="category" id="category" placeholder="Enter Category">
+    </div>
+    <div class="form-group">
+      <label>Sent Status</label>
+      <input type="text" name="status" id="status" placeholder="Enter Status">
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" name="date" id="date" placeholder="Enter Date">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" name="description" id="description" placeholder="Enter Description">
+    </div>
+    <div class="form-group">
+      <label>Months Prior</label>
+      <input type="number" name="monthsprior" id="monthsprior" placeholder="Enter Months Prior">
+    </div>
+      <input type="submit" name="submit" value="Sign Up" onclick="alert('This is just a demo'); return false;">
+</form>
+</div>
+  
+  
+
+</body>
+
+</html>

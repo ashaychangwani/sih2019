@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  {% load static %}
+  <title></title>
+  
+      <link rel="stylesheet" href="{% static 'css/wo.css' %}">
+      <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  
+</head>
+
+<body>
+<div class="header">
+  <a href="#default" class="logo">Gully Bois</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#ar">Asset Register</a>
+    <a href="#su">Spares Upkeep</a>
+    <a href="#ml">Maintenance Log</a>
+    <a href="#tt">Time Table</a>
+    <a href="#amc">AMC Renewal</a>
+    <a href="#inv">Invoice</a>
+    <a href="#nf">Notifications</a>
+  </div>
+    </div>
+<div class="container">
+	
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="wono" class="filter__link filter__link--number" href="#">W/o No</a></div>
+			<div class="header__item"><a id="des" class="filter__link filter__link--number" href="#">Description</a></div>
+			<div class="header__item"><a id="start" class="filter__link filter__link--number" href="#">Start</a></div>
+			<div class="header__item"><a id="end" class="filter__link filter__link--number" href="#">End</a></div>
+			<div class="header__item"><a id="status" class="filter__link filter__link--number" href="#">Status</a></div>
+			<div class="header__item"><a id="cost" class="filter__link filter__link--number" href="#">Cost</a></div>
+		</div>
+		<div class="table-content">
+			<div class="table-row">		
+				<div class="table-data">Tom</div>
+				<div class="table-data">2</div>
+				<div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Dick</div>
+				<div class="table-data">1</div>
+				<div class="table-data">1</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Harry</div>
+				<div class="table-data">0</div>
+				<div class="table-data">2</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div> 
+			</div>
+		</div>	
+	</div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+
+    <script  src="{% static 'js/wo.js' %}"></script>
+
+
+
+
+</body>
+
+</html>

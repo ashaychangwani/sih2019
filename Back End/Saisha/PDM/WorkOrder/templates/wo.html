@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  {% load static %}
+  <title></title>
+      <link rel="stylesheet" href="{% static 'css/wo.css' %}">
+      <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <a href="#default" class="logo">Prevention > Cure</a>
+        <div class="header-right">
+            <a class="active head" href="#home">Home</a>
+            <a class="head" href="http://127.0.0.1:8000/Assets">Asset Register</a>
+            <a class="head" href="http://127.0.0.1:8000/SparesUpKeep">Spares Upkeep</a>
+            <a class="head" href="http://127.0.0.1:8000/MaintenanceLog">Maintenance Log</a>
+            <a class="head" href="http://127.0.0.1:8000/Timetable">Time Table</a>
+            <a class="head" href="http://127.0.0.1:8000/AMCRenewal">AMC Renewal</a>
+            <a class="head" href="http://127.0.0.1:8000/Invoice">Invoice</a>
+            <img class="head" onclick="http://127.0.0.1:8000/Notifications" src="{% static 'media/notifs.png' %}" alt="My image" height="35dp" >
+            <a class="head" href="http://127.0.0.1:8000/Notifications">Notifications</a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="wono" class="filter__link filter__link--number" href="#">WorkOrder Number</a></div>
+                <div class="header__item"><a id="des" class="filter__link filter__link--number" href="#">Description</a></div>
+                <div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+                <div class="header__item"><a id="start" class="filter__link filter__link--number" href="#">Start</a></div>
+                <div class="header__item"><a id="end" class="filter__link filter__link--number" href="#">End</a></div>
+                <div class="header__item"><a id="status" class="filter__link filter__link--number" href="#">Status</a></div>
+                <div class="header__item"><a id="cost" class="filter__link filter__link--number" href="#">Cost</a></div>
+            </div>
+            <div class="table-content">
+                {% for entry in amc %}
+                <div class="table-row">
+                    <div class="table-data">{{ entry.WorkOrderNum }}</div>
+                    <div class="table-data">{{ entry.Description }}</div>
+                    <div class="table-data">{{ entry.Date }}</div>
+                    <div class="table-data">{{ entry.Start }}</div>
+                    <div class="table-data">{{ entry.End }}</div>
+                    <div class="table-data">{{ entry.Status }}</div>
+                    <div class="table-data">{{ entry.Cost }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script  src="{% static 'js/wo.js' %}"></script>
+    </body>
+</html>

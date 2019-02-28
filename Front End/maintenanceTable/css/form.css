@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+  background: #fff;
+  background-image:url("https://source.unsplash.com/random/1440x900/?sky,pattern,abstract");
+  background-position:center;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat:no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  margin:0;
+}
+
+.container{
+  box-sizing:border-box;
+  padding:20px;
+  width:60%;
+  margin:auto;
+  background: rgba(233,233,233,0.9);
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+}
+
+.container h1, p{
+  text-align:center;
+}
+
+.form-group{
+  padding: 5px 0;
+}
+
+.form-group label{
+  display:block;
+  padding:8px 0px;
+}
+
+.form-group input, select{
+  background: #f5f5f5;
+  display:block;
+  border:none;
+  border-radius:5px;
+  width:100%;
+  font-size:16px;
+  font-family: 'Montserrat', sans-serif;
+  padding:10px 0px 10px 8px;
+}
+
+.form-group label{
+  font-size:17px;
+  display:block;
+  padding:8px 0px;
+}
+
+.radio {
+  text-align:center;
+}
+
+.radio input{
+  display:inline-block;  
+}
+
+.radio{
+  margin:30px 0;
+}
+
+.radio label{
+  padding:20px;
+}
+
+input[type=submit]{
+  font-family: 'Montserrat', sans-serif;
+  display:block;
+  width:60%;
+  margin:40px auto 10px auto;
+  background: #333333;
+  border:none;
+  border-radius: 3px;
+  text-transform:uppercase;
+  color: #fff;
+  font-size:17px;
+  padding:8px 20px;
+  /* fallback for old browsers */
+  background: #0F2027;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+input[type=submit]:hover{
+  cursor: pointer;
+  font-weight:600;
+  /* fallback for old browsers */
+  background: #0F2027;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027); 
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+}
+
+@media screen and (min-width:1366px){
+  .container{
+    width:40%;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    background: rgba(233,233,233,1);
+  }
+  .container{
+    background: rgba(233,233,233,1);
+    width:100%;
+    border-radius:0;
+  }
+}
+
+
+@media screen and (max-width:500px){
+  .radio #gender-label{
+    display:block;  
+  }
+  
+  .radio label{
+    display:inline-block;
+  }
+  
+  input[type=submit]{
+    width:100%;
+    margin:0;
+  }
+}

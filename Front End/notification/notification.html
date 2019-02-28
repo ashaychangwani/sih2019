@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+<!--    {% load static %} -->
+  <title></title>
+    <link rel="stylesheet" href="css/notification.css">
+      <link rel="stylesheet" href="css/header.css">
+  
+<!--
+      <link rel="stylesheet" href="{% static 'css/notification.css' %}">
+      <link rel="stylesheet" href="{% static 'css/header.css' %}">
+-->
+  
+</head>
+
+<body>
+	<div class="header">
+  		<h1 class="logo">gullybois</h1>
+		<div class="header-right">
+            <a href="home.html">Home</a>
+    		<a href="assetRegister\areg.html">Asset Register</a>
+ 			<a href="spareTable\spare.html">Spares Upkeep</a>
+    		<a href="maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a href="time\time.html">Time Table</a>
+    		<a href="amc\amc.html">AMC Renewal</a>
+    		<a href="invoice\invoice.html">Invoice</a>
+    		<a class="active" href="notification\notification.html">Notifications</a>
+			<a href="workOrder\wo.html">Work Order</a>
+  		</div>
+	</div>
+	<h8>Because Prevention is Better than Cure</h8>
+
+<div class="container">
+	
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machin ID</a></div>
+			<div class="header__item"><a id="category" class="filter__link filter__link--number" href="#">Category</a></div>
+			<div class="header__item"><a id="status" class="filter__link filter__link--number" href="#">Sent Status</a></div>
+			<div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+			<div class="header__item"><a id="des" class="filter__link filter__link--number" href="#">Desription</a></div>
+			<div class="header__item"><a id="nom" class="filter__link filter__link--number" href="#">Months Prior</a></div>
+		</div>
+		<div class="table-content">
+			<div class="table-row">		
+				<div class="table-data">Tom</div>
+				<div class="table-data">2</div>
+				<div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Dick</div>
+				<div class="table-data">1</div>
+				<div class="table-data">1</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Harry</div>
+				<div class="table-data">0</div>
+				<div class="table-data">2</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+                <div class="table-data">0</div>
+			</div>
+		</div>	
+	</div>
+</div>
+    <a href="notificationform.html">Add Notification</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script  src="{% static 'js/notification.js' %}"></script>
+
+
+
+</body>
+
+</html>
