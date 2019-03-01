@@ -11,6 +11,8 @@
 
       <link rel="stylesheet" href="css/time.css">
     <link rel="stylesheet" href="css/header.css">
+    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+
 
   
 </head>
@@ -102,19 +104,33 @@ function fill_table(month, month_length, indexMonth) {
 </script>
     
     <div class="header">
-  <a href="#default" class="logo">Gully Bois</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#ar">Asset Register</a>
-    <a href="#su">Spares Upkeep</a>
-    <a href="#ml">Maintenance Log</a>
-    <a href="#tt">Time Table</a>
-    <a href="#amc">AMC Renewal</a>
-    <a href="#inv">Invoice</a>
-    <a href="#nf">Notifications</a>
-  </div>
-    </div>
-    
+  		<h1 class="logo">Prevention > Cure</h1>
+		<div class="header-right">
+    		<a href="..\home.html">Home</a>
+            <div class="subnav">
+                <button class="subnavbtn">Inventory</button>
+                <div class="subnav-content">
+                    <a href="..\assetRegister\areg.html">Asset Register</a>
+ 			        <a href="..\spareTable\spare.html">Spares Upkeep</a>
+                </div>
+            </div> 
+    		<div class="subnav">
+                <button class="subnavbtn active">Accounting</button>
+                <div class="subnav-content">
+                    <a href="..\invoice\invoice.html">Invoice</a>
+ 			        <a href="..\workOrder\wo.html">Work Order</a>
+                    <a href="..\amc\amc.html">AMC Renewal</a>
+                </div>
+            </div> 
+    		<a href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a class="active" href="..\time\time.html">Time Table</a>
+    		<a href="#"><ion-icon name="person"></ion-icon></a>
+            <a href="..\notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
+        </div>
+	</div>
+    <div style="background-color: #f5f9f8; width: 100%; height=100%;">
+        <h4>Time Table</h4>
+</div>
 <header>
   <div class="wrapper">
     <div class="c-monthyear">
@@ -201,6 +217,7 @@ function fill_table(month, month_length, indexMonth) {
   
 
     <script  src="js/time.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 
 
 

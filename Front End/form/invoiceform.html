@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spare Form</title>
+   
+<!--      <link rel="stylesheet" href="{% static 'css/form.css' %}">-->
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/header.css">
+
+  
+</head>
+
+<body>
+    
+    <div class="header">
+  		<h1 class="logo">Prevention > Cure</h1>
+		<div class="header-right">
+    		<a href="..\home.html">Home</a>
+            <div class="subnav">
+                <button class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\assetRegister\areg.html">Asset Register</a>
+ 			        <a href="..\spareTable\spare.html">Spares Upkeep</a>
+                </div>
+            </div> 
+    		<div class="subnav">
+                <button class="subnavbtn active">Accounting<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\invoice\invoice.html">Invoice</a>
+ 			        <a href="..\workOrder\wo.html">Work Order</a>
+                    <a href="..\amc\amc.html">AMC Renewal</a>
+                </div>
+            </div> 
+    		<a class="active  " href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a href="..\time\time.html">Time Table</a>
+    		<a href="#"><ion-icon name="person"></ion-icon></a>
+            <a href="..\notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
+        </div>
+	</div>
+
+  <div class="container">
+  <h1>Invoice</h1>
+  <form>
+    <div class="form-group">
+      <label>Invoice No.</label>
+      <input type="number" name="ino" id="ino" placeholder="Enter Invoice No.">
+    </div>
+    <div class="form-group">
+      <label>Customer</label>
+      <input type="text" name="cust" id="cust" placeholder="Enter Customer">
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" name="date" id="date" placeholder="Enter Date">
+    </div>
+    <div class="form-group">
+      <label>Amount</label>
+      <input type="number" name="amt" id="amt" placeholder="Enter Amount">
+    </div>
+    <div class="form-group">
+      <label>Paid</label>
+      <input type="number" name="paid" id="paid" placeholder="Enter Paid">
+    </div>
+    <div class="form-group">
+      <label>Balance</label>
+      <input type="number" name="bal" id="bal" placeholder="Enter Balance">
+    </div>
+    <div class="form-group">
+      <label>Payment Due</label>
+      <input type="date" name="due" id="due" placeholder="Payment Due">
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <input type="text" name="status" id="status" placeholder="Status">
+    </div>
+    <div class="form-group">
+      <label>Entered By</label>
+      <input type="text" name="entry" id="entry" placeholder="Entered By">
+    </div>
+    <input type="submit" name="submit" value="Submit">
+</form>
+</div>
+  
+  
+<script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+</body>
+
+</html>

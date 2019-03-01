@@ -3,29 +3,52 @@
 
 <head>
   <meta charset="UTF-8">
-  {% load static %}
+<!--  {% load static %}-->
   <title></title>
   
+    <link rel="stylesheet" href="css/wo.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+<!--
       <link rel="stylesheet" href="{% static 'css/wo.css' %}">
       <link rel="stylesheet" href="{% static 'css/header.css' %}">
+-->
   
 </head>
 
 <body>
 <div class="header">
-  <a href="#default" class="logo">Gully Bois</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#ar">Asset Register</a>
-    <a href="#su">Spares Upkeep</a>
-    <a href="#ml">Maintenance Log</a>
-    <a href="#tt">Time Table</a>
-    <a href="#amc">AMC Renewal</a>
-    <a href="#inv">Invoice</a>
-    <a href="#nf">Notifications</a>
-  </div>
-    </div>
-<div class="container">
+  		<h1 class="logo">Prevention > Cure</h1>
+		<div class="header-right">
+    		<a href="..\home.html">Home</a>
+            <div class="subnav">
+                <button class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\assetRegister\areg.html">Asset Register</a>
+ 			        <a href="..\spareTable\spare.html">Spares Upkeep</a>
+                </div>
+            </div> 
+    		<div class="subnav">
+                <button class="subnavbtn">Accounting<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\invoice\invoice.html">Invoice</a>
+ 			        <a class="active" href="..\workOrder\wo.html">Work Order</a>
+                    <a href="..\amc\amc.html">AMC Renewal</a>
+                </div>
+            </div> 
+    		<a href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a href="..\time\time.html">Time Table</a>
+    		<a href="#"><ion-icon name="person"></ion-icon></a>
+            <a href="..\notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
+        </div>
+    
+	</div>
+    
+    <div style="background-color: #f5f9f8; width: 100%; height=100%;">
+        <h4>Work Order</h4>
+</div>
+    
+    <div class="container">
 	
 	<div class="table">
 		<div class="table-header">
@@ -64,11 +87,12 @@
 		</div>	
 	</div>
 </div>
+    <a class="btn btn-full" href="../form/woform.html">Add W/o</a>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  
-
-    <script  src="{% static 'js/wo.js' %}"></script>
+  <script  src="js/wo.js"></script>
+  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+<!--    <script  src="{% static 'js/wo.js' %}"></script>-->
 
 
 

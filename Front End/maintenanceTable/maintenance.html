@@ -3,29 +3,50 @@
 
 <head>
   <meta charset="UTF-8">
-    {% load static %}
+<!--    {% load static %}-->
   <title></title>
-  
+    
+    <link rel="stylesheet" href="css/maintenance.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+<!--
       <link rel="stylesheet" href="{% static 'css/maintenance.css' %}">
       <link rel="stylesheet" href="{% static 'css/header.css' %}">
+-->
   
 </head>
 
 <body>
 
     <div class="header">
-  <a href="#default" class="logo">Gully Bois</a>
-  <div class="header-right">
-    <a class="active head" href="#home">Home</a>
-    <a class="head" href="#ar">Asset Register</a>
-    <a class="head" href="#su">Spares Upkeep</a>
-    <a class="head" href="#ml">Maintenance Log</a>
-    <a class="head" href="#tt">Time Table</a>
-    <a class="head" href="#amc">AMC Renewal</a>
-    <a class="head" href="#inv">Invoice</a>
-    <a class="head" href="#nf">Notifications</a>
-  </div>
-    </div>
+  		<h1 class="logo">Prevention > Cure</h1>
+		<div class="header-right">
+    		<a href="..\home.html">Home</a>
+            <div class="subnav">
+                <button class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\assetRegister\areg.html">Asset Register</a>
+ 			        <a href="..\spareTable\spare.html">Spares Upkeep</a>
+                </div>
+            </div> 
+    		<div class="subnav">
+                <button class="subnavbtn active">Accounting<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\invoice\invoice.html">Invoice</a>
+ 			        <a href="..\workOrder\wo.html">Work Order</a>
+                    <a href="..\amc\amc.html">AMC Renewal</a>
+                </div>
+            </div> 
+    		<a class="active  " href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a href="..\time\time.html">Time Table</a>
+    		<a href="#"><ion-icon name="person"></ion-icon></a>
+            <a href="..\notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
+        </div>
+	</div>
+
+<div style="background-color: #f5f9f8; width: 100%; height=100%;">
+        <h4>Maintenance Log</h4>
+</div>
     
 <div class="container">
 	
@@ -66,9 +87,12 @@
 		</div>	
 	</div>
 </div>
+    <a class="btn btn-full" href="../form/maintenanceform.html">Add Maintenance</a>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script  src="{% static 'js/maintenance.js' %}"></script>
+  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+    
+<!--    <script  src="{% static 'js/maintenance.js' %}"></script>-->
+    <script  src="js/maintenance.js"></script>
 
 
 </body>

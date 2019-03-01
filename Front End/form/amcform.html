@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>AMC Form</title>
+   
+<!--    <link rel="stylesheet" href="{% static 'css/form.css' %}">-->
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/header.css">
+
+  
+</head>
+
+<body>
+    
+    <div class="header">
+  		<h1 class="logo">Prevention > Cure</h1>
+		<div class="header-right">
+    		<a href="..\home.html">Home</a>
+            <div class="subnav">
+                <button class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\assetRegister\areg.html">Asset Register</a>
+ 			        <a href="..\spareTable\spare.html">Spares Upkeep</a>
+                </div>
+            </div> 
+    		<div class="subnav">
+                <button class="subnavbtn active">Accounting<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="..\invoice\invoice.html">Invoice</a>
+ 			        <a href="..\workOrder\wo.html">Work Order</a>
+                    <a href="..\amc\amc.html">AMC Renewal</a>
+                </div>
+            </div> 
+    		<a class="active  " href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a href="..\time\time.html">Time Table</a>
+    		<a href="#"><ion-icon name="person"></ion-icon></a>
+            <a href="..\notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
+        </div>
+	</div>
+
+  <div class="container">
+  <h1>AMC</h1>
+  <form>
+    <div class="form-group">
+      <label>Machine ID</label>
+      <input type="number" name="mid" id="mid" placeholder="Enter Machine ID">
+    </div>
+    <div class="form-group">
+      <label>Company</label>
+      <input type="text" name="company" id="company" placeholder="Company">
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <input type="text" name="category" id="category" placeholder="Category">
+    </div>
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+    </div>
+    <div class="form-group">
+      <label>Factory ID</label>
+      <input type="number" name="fac" id="fac" placeholder="Enter Factory ID">
+    </div>
+    <div class="form-group">
+      <label>AMC Company</label>
+      <input type="text" name="amc" id="amc" placeholder="Enter AMC Company">
+    </div>
+    <div class="form-group">
+      <label>Expiry Date</label>
+      <input type="date" name="expiry" id="expiry" placeholder="Expiry Date">
+    </div>
+    <input type="submit" name="submit" value="Submit">
+</form>
+</div>
+<script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+</body>
+
+</html>
