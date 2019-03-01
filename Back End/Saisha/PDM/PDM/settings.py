@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'MaintenanceLog.apps.MaintenancelogConfig',
     'SparesUpKeep.apps.SparesupkeepConfig',
     'WorkOrder.apps.WorkordersConfig',
+    'Account.apps.AccountConfig',
     #'Home.apps.HomeConfig',
     #'Timetable.apps.TimetableConfig',
     'AMCRenewal.apps.AmcrenewalConfig',

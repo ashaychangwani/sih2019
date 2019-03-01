@@ -22,8 +22,9 @@ urlpatterns = [
     path('MaintenanceLog/', include('MaintenanceLog.urls')),
     path('SparesUpKeep/', include('SparesUpKeep.urls')),
     path('AMCRenewal/', include('AMCRenewal.urls')),
-    #path('Home/', include('Home.urls')),
-    #path('Timetable/', include('Timetable.urls')),
+    path('', include('Home.urls')),
+    path('Account/', include('Account.urls')),
+    #path('Timetable/', include('Timetable.urls')s),
     path('WorkOrder/', include('WorkOrder.urls')),
 
 ]
