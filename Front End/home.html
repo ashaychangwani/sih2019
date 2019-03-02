@@ -3,73 +3,87 @@
 
 <head>
 
-    {% load static %}
+<!--    {% load static %}-->
 
     <meta charset="UTF-8">
 	
     <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
-
+<!--
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/headersrch.css' %}">    
-<!--
+-->
     <link rel="stylesheet" href="header.css">
 	<link rel="stylesheet" href="headersrch.css">
--->
 </head>
 
 <body>
-	<div class="header">
-  		<h1 class="logo">Prevention > Cure</h1>
-		<div class="header-right">
-    		<a class="active" href="home.html">Home</a>
-            <div class="subnav">
-                <button class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
-                    <a href="assetRegister\areg.html">Asset Register</a>
- 			        <a href="spareTable\spare.html">Spares Upkeep</a>
-                </div>
-            </div> 
-    		<div class="subnav">
-                <button class="subnavbtn">Accounting<i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
-                    <a href="invoice\invoice.html">Invoice</a>
- 			        <a href="workOrder\wo.html">Work Order</a>
-                    <a href="amc\amc.html">AMC Renewal</a>
-                </div>
-            </div> 
-    		<a href="maintenanceTable\maintenance.html">Maintenance Log</a>
-    		<a href="time\time.html">Time Table</a>
-    		<a href="#"><ion-icon name="person"></ion-icon></a>
-            <a href="notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
+    <div class="bigboss">
+	<div class="vnavbar header">
+        <div class="header">
+            <h1 class="logo">Prevention > Cure</h1>
         </div>
-	</div>
-    
-	<div class="abc" style="background-color: #f5f9f8; width: 100%; height=100%;">
-        <h4>Home</h4>
-</div>
-	<div class="incpad" style="background-color: #f5f9f8; width: 100%; height=100%;">
-		<div class="row1" style="background-color: #ffffff;">
-			<h2>Maintenance Services</h2>
-			<div class="col1" style="background-color: #ffffff;">
-				<h3>Annual</h3>
-				<p>An agreement with a service provider for repair and maintenance of property used by your company.</p>
-			</div>
-			<div class="col1" style="background-color: #ffffff;">
-				<h3>Scheduled</h3>
-				<p>A list of predetermined maintenance actions carried out at regular time intervals that are aimed at the prevention of breakdowns.</p>
-			</div>		
-			<div class="col1" style="background-color: #ffffff;">
-				<h3>Predictive</h3>
-				<p>Techniques designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed.</p>
-			</div>
-            
-            <img  src="{% static 'media/maint1.png' %}" height="416" wigth="717" class="center"></img>
-            
-<!--			<img src="maint1.png" height="416" wigth="717" class="center">-->
-		
         
-        </div>		
-	</div>
-    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+        <ul class= "nav-list" style="list-style-type:none;">
+            <li><a class="active" href="home.html">Home</a></li>
+            <br>
+                <div class="subnav">
+                <a class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></a>
+                <ion-icon class="icon2" name="arrow-dropdown"></ion-icon>
+                <ul style="list-style-type:none;">
+                    <div class="subnav-content">
+                        <li><a class="subnavsux" href="assetRegister\areg.html">Asset Register</a></li>
+                        <li><a class="subnavsux" href="spareTable\spare.html">Spares Upkeep</a></li>
+                    </div> 
+                </ul>
+                </div> 
+            <li style="list-style-type:none;">
+                <div class="subnav">
+                <a class="subnavbtn">Accounting<i class="fa fa-caret-down"></i></a>
+                <ion-icon class="icon3" name="arrow-dropdown"></ion-icon>
+                <ul style="list-style-type:none;">
+                    <div class="subnav-content">
+                        <li><a class="subnavsux" href="invoice\invoice.html">Invoice</a></li>
+                        <li><a class="subnavsux" href="workOrder\wo.html">Work Order</a></li>
+                        <li><a class="subnavsux" href="amc\amc.html">AMC Renewal</a></li>
+                    </div>
+                </ul>
+                </div>	
+            </li>	
+            <li><a href="maintenanceTable\maintenance.html">Maintenance Log</a></li>
+            <li><a href="time\time.html">Time Table</a></li>
+            <li><a style="float: right" href="#"><ion-icon name="person"></ion-icon></a>
+                <a style="float: left" href="notification/notification.html"><ion-icon name="notifications"></ion-icon></a></li>
+        </ul>
+    </div>
+     
+    
+    <div class="vbody">
+	   <div class="abc" style="background-color: #f5f9f8; height=100%;">
+           <h4>Home</h4>
+        </div>
+	   <div class="incpad" style="background-color: #f5f9f8; width: 100%; height=100%;">
+		  <div class="row1" style="background-color: #ffffff;">
+              <h2>Maintenance Services</h2>
+              <div class="col1" style="background-color: #ffffff;">
+                  <h3>Annual</h3>
+				    <p>An agreement with a service provider for repair and maintenance of property used by your company.</p>
+              </div>
+			  <div class="col1" style="background-color: #ffffff;">
+				    <h3>Scheduled</h3>
+				    <p>A list of predetermined maintenance actions carried out at regular time intervals that are aimed at the prevention of breakdowns.</p>
+                </div>		
+                <div class="col1" style="background-color: #ffffff;">
+                    <h3>Predictive</h3>
+                    <p>Techniques designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed.</p>
+                </div>
+            
+              <!--            <img  src="{% static 'media/maint1.png' %}" height="416" wigth="717" class="center"></img>-->
+			     <img src="maint1.png" height="416" wigth="717" class="center">
+		
+            </div>		
+	   </div>
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+    </div>
+    </div>
 </body>
 </html>

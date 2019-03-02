@@ -1,27 +1,46 @@
-body header{
+body{
     margin: 0;
+    width: 98.7vw;
+    height: 100vh;
+    
 }
 
-* {box-sizing: border-box;}
+* {box-sizing: border-box;
+}
 
 .logo{
-  font-family: 'Josefin Sans', sans-serif !important;
-  margin-bottom: -45px;
+  font-family: 'Asar' !important;
+  margin-bottom: 0px;
   color: white;
-  font-weight: 150;
+  font-weight: 200;
   padding: 0 0 0 20px;
   letter-spacing: 1.2px;
-  font-size: 50px;
+  font-size: 26px;
   margin-top: 10px;
+}
+
+.icon2{
+    margin: 21px -13px;
+    font-size: 20px !important;
+    display: inline-block;
+    position: absolute;
+}
+
+.icon3{
+    margin: 21px -14px;
+    font-size: 20px !important;
+    display: inline-block;
+    position: absolute;
 }
 
 .subnav-content {
   display: none;
   position: absolute;
-  left: auto;
-  background-color: #35393d;
-  width: 100%;
+  float: left;
+  background-color: #676869;
   z-index: 1;
+  margin-left: 8px;
+
 }
 
 .subnav {
@@ -42,7 +61,6 @@ body header{
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1.15px;
   font-weight: 500;
-
 }
 
 .subnav-content a {
@@ -52,17 +70,34 @@ body header{
 
 .subnav-content a:hover {
   background-color: #eee;
-  color: black;
+  color: #35393d;
 }
 
 .subnav:hover .subnav-content {
   display: inline-block;
 }
 
+.subnavsux {
+    line-height: 16px !important;
+    font-size: 13px !important;
+    width: 100%;
+    padding: 7px 10px 7px 10px !important;
+    display: block;
+    z-index: auto;
+}
+
 ion-icon {
     font-size: 38px;
     color: #f5f9f8;
-    margin-top: -10px;
+    display: inline-block;
+}
+.nav-list li:last-of-type a{
+    position: absolute;
+    bottom: 0;
+}
+
+.nav-list li:last-of-type a:last-of-type{
+    right: 10px;
 }
 
 ion-icon:hover{
@@ -70,10 +105,14 @@ ion-icon:hover{
     color: #fcd088;
 }
 
+.nav-list{
+    padding-left: 20px;
+}
+
 .header{
   overflow: hidden;
   background-color: #35393d;
-  padding: 10px 10px 25px;
+  padding: 10px 0px 20px;
 }
 
 .header a{
@@ -101,8 +140,9 @@ ion-icon:hover{
 
 .header a:hover{
     font-color: #fcd088;
-    border-bottom: 1px solid #fcd088;
-    line-height: 22px;
+    border-bottom: 0.8px solid #fcd088;
+
+    transition: 0.8s;
 }
 
 .header a.active{
@@ -113,10 +153,28 @@ ion-icon:hover{
   color: #fcd088;
 }
 
-.header-right{
-  float: right;
+.nav-list li:last-of-type{
+    width: 100%;
+    float: left;
+    display: block;
 }
 
+.vnavbar{
+    width: 20%;
+    height: 100vh;
+    display: inline-block;
+    float: left;
+    position: fixed;
+    top: 0;
+}
+
+.vbody{
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+/*
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -128,6 +186,7 @@ ion-icon:hover{
     float: none;
   }
 }
+*/
 
 h8{
   font-family: 'Open Sans', sans-serif;
