@@ -4,6 +4,7 @@
 }
 
 body {
+  background-image: url(https://source.unsplash.com/random/1440x900/?sky,pattern,abstract);
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
 }
@@ -103,7 +104,7 @@ input[type=submit]:hover{
 
 .btn {
     width: 10%;
-    margin: 45px 45px;
+    margin: 45px 45%;
 }
 
 .btn:link,
@@ -152,7 +153,10 @@ input[type=submit]:hover{
   padding: 18px 0;
 }
 .table-row:nth-of-type(odd) {
-  background: #f5f9f8;  
+    background: rgb(255, 255, 255);
+}
+.table-row:nth-of-type(even) {
+    background: rgb(237, 232, 232);
 }
 
 .table-data, .header__item {

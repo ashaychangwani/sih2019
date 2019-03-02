@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  
+    
+      <link rel="stylesheet" href="css/asset.css">
+      <link rel="stylesheet" href="css/header.css">
+      <link rel="stylesheet" href="css/menu.css">
+    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+  
+</head>
+
+<body>
+
+    <div id="accordian">
+        <ul>
+            <li>
+                <h3><a href="#"><i class="fa fa-lg fa-tasks"></i>Facilities</a></h3>
+                    <ul>
+                        <li>
+                            <a href="#">Mumbai</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Factory 1</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Production Line 1</a>
+                                                        <ul>
+                                                            <li><a id="m1" href="#" onclick="reply_click(this.id)">Machine 1</a></li>
+                                                           <li><a  id="m2" ref="#" onclick="reply_click(this.id)">Machine 2</a></li>
+                                                            <li><a onclick="myFunction()" href="#">Machine 3</a></li>
+                                                        </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Production Line 2</a>
+                                                        <ul>
+                                                            <li><a onclick="myFunction()">Machine 1</a></li>
+                                                            <li><a onclick="myFunction()">Machine 2</a></li>
+                                                            <li><a onclick="myFunction()">Machine 3</a></li>
+                                                        </ul>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="myDIV">
+        <div class="w3-bar w3-black">
+          <button class="w3-bar-item w3-button" id="btn-details" onclick="openCity('details', this.id)">Details</button>
+          <button class="w3-bar-item w3-button" id="btn-preventive" onclick="openCity('preventive', this.id)">Preventive Maintenance</button>
+          <button class="w3-bar-item w3-button" id="btn-history" onclick="openCity('history', this.id)">History</button>
+        </div>
+
+        <div id="dets" class="w3-container city">
+          <h2 id="london">Test</h2>
+          <p >London is the capital city of England.</p>
+        </div>
+
+        <div id="preventive" class="w3-container city" style="display:none">
+          <h2 id="paris"></h2>
+          <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">Name</a></div>
+                <div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+                <div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+                <div class="header__item"><a id="time" class="filter__link filter__link--number" href="#">Time</a></div>
+                <div class="header__item"><a id="details" class="filter__link filter__link--number" href="#">Details</a></div>
+                <div class="header__item"><a id="comment" class="filter__link filter__link--number" href="#">Comments</a></div>
+            </div>
+            <div class="table-content">	
+                <div class="table-row">		
+                    <div class="row1 table-data">1</div>
+                    <div class="row2 table-data">2</div>
+                    <div class="row3 table-data">3</div>
+                    <div class="row4 table-data">4</div>
+                    <div class="row5 table-data">5</div>
+                    <div class="row6 table-data">6</div>
+                </div>
+                <div class="table-row">		
+                    <div class="row1 table-data">7</div>
+                    <div class="row2 table-data">8</div>
+                    <div class="row3 table-data">9</div>
+                    <div class="row4 table-data">10</div>
+                    <div class="row5 table-data">11</div>
+                    <div class="row6 table-data">11</div>
+                </div>
+            </div>	
+            </div>
+        </div>
+
+        <div id="history" class="w3-container city" style="display:none">
+          <h2 id="tokyo"></h2>
+          <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name-h" class="filter__link" href="#">Name</a></div>
+                <div class="header__item"><a id="mid-h" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+                <div class="header__item"><a id="date-h" class="filter__link filter__link--number" href="#">Date</a></div>
+                <div class="header__item"><a id="time-h" class="filter__link filter__link--number" href="#">Time</a></div>
+                <div class="header__item"><a id="details-h" class="filter__link filter__link--number" href="#">Details</a></div>
+                <div class="header__item"><a id="comment-h" class="filter__link filter__link--number" href="#">Comments</a></div>
+            </div>
+            <div class="table-content">	
+                <div class="table-row">		
+                    <div class="row1 table-data">a</div>
+                    <div class="row2 table-data">2</div>
+                    <div class="row3 table-data">3</div>
+                    <div class="row4 table-data">4</div>
+                    <div class="row5 table-data">5</div>
+                    <div class="row6 table-data">6</div>
+                </div>
+                <div class="table-row">		
+                    <div class="row1 table-data">7</div>
+                    <div class="row2 table-data">8</div>
+                    <div class="row3 table-data">9</div>
+                    <div class="row4 table-data">10</div>
+                    <div class="row5 table-data">11</div>
+                    <div class="row6 table-data">11</div>
+                </div>
+            </div>	
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+
+    <script src="js/asset.js"></script>
+    <script src="js/menu.js"></script>
+    </body>
+</html>

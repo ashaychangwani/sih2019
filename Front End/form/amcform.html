@@ -33,7 +33,7 @@
                     <a href="..\amc\amc.html">AMC Renewal</a>
                 </div>
             </div> 
-    		<a class="active  " href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
+    		<a class="" href="..\maintenanceTable\maintenance.html">Maintenance Log</a>
     		<a href="..\time\time.html">Time Table</a>
     		<a href="#"><ion-icon name="person"></ion-icon></a>
             <a href="..\notification/notification.html"><ion-icon name="notifications"></ion-icon></a>
@@ -48,28 +48,37 @@
       <input type="number" name="mid" id="mid" placeholder="Enter Machine ID">
     </div>
     <div class="form-group">
-      <label>Company</label>
-      <input type="text" name="company" id="company" placeholder="Company">
+      <label>Facility</label>
+      <input type="text" name="facility" id="facility" placeholder="Facility">
     </div>
     <div class="form-group">
-      <label>Category</label>
-      <input type="text" name="category" id="category" placeholder="Category">
+      <label>Factory</label>
+      <input type="text" name="fac" id="fac" placeholder="Factory">
     </div>
     <div class="form-group">
-      <label>Quantity</label>
-      <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+      <label>Production Line</label>
+      <input type="text" name="prod" id="prod" placeholder="Production Line">
     </div>
     <div class="form-group">
-      <label>Factory ID</label>
-      <input type="number" name="fac" id="fac" placeholder="Enter Factory ID">
+      <label>Supplier</label>
+      <input type="text" name="sup" id="sup" placeholder="Supplier">
     </div>
     <div class="form-group">
-      <label>AMC Company</label>
-      <input type="text" name="amc" id="amc" placeholder="Enter AMC Company">
+      <label>Last Renewal Date</label>
+      <input type="date" name="date" id="date" placeholder="Last Renewal Date">
     </div>
     <div class="form-group">
-      <label>Expiry Date</label>
-      <input type="date" name="expiry" id="expiry" placeholder="Expiry Date">
+      <label>Frequency</label>
+      <select name="freq" id="freq">
+        <option value="1 month">1 month</option>
+        <option value="3 months">3 months</option>
+        <option value="6 months">6 months</option>
+        <option value="12 months">12 months</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Details</label>
+      <input type="text" name="details" id="details" placeholder="Details">
     </div>
     <input type="submit" name="submit" value="Submit">
 </form>
