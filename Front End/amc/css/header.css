@@ -101,7 +101,11 @@ ion-icon:hover{
     line-height: 22px;
 }
 
-.header a.active {
+.header a.active{
+  color: #fcd088;
+}
+
+.header button.active{
   color: #fcd088;
 }
 

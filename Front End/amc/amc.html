@@ -2,14 +2,18 @@
 <html lang="en" >
 
 <head>
+    <!--    {% load static %}-->
   <meta charset="UTF-8">
   <title></title>
   
     
-      <link rel="stylesheet" href="css/amc.css">
-      <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/amc.css">
+    <link rel="stylesheet" href="css/header.css">
     <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
   
+    <link rel="stylesheet" href="{% static 'css/amc.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    
 </head>
 
 <body>
@@ -29,7 +33,7 @@
                 <div class="subnav-content">
                     <a href="..\invoice\invoice.html">Invoice</a>
  			        <a href="..\workOrder\wo.html">Work Order</a>
-                    <a claqss="active" href="..\amc\amc.html">AMC Renewal</a>
+                    <a class="active" href="..\amc\amc.html">AMC Renewal</a>
                 </div>
             </div> 
     		<a class="" href="..\maintenanceTable\maintenance.html">Maintenance Log</a>

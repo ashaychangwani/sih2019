@@ -11,10 +11,6 @@
   margin-top: 10px;
 }
 
-.body header{
-    margin: 0;
-}
-
 .subnav-content {
   display: none;
   position: absolute;
@@ -105,7 +101,11 @@ ion-icon:hover{
     line-height: 22px;
 }
 
-.header a.active {
+.header a.active{
+  color: #fcd088;
+}
+
+.header button.active{
   color: #fcd088;
 }
 
