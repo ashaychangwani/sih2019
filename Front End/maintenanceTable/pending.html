@@ -45,8 +45,12 @@
 	</div>
 
 <div style="background-color: #f5f9f8; width: 100%; height=100%;">
-        <h4>Maintenance Log</h4>
+        <h4>Pending Log</h4>
 </div>
+                
+    
+    <form>
+
     
 <div class="container">
 	
@@ -60,7 +64,9 @@
 			<div class="header__item"><a id="comment" class="filter__link filter__link--number" href="#">Comments</a></div>
 		</div>
 		<div class="table-content">	
-			<div class="table-row">		
+			<div class="table-row">	
+                <input type="checkbox" name="pend" value="1" unchecked> <br>
+
 				<div class="table-data">Tom</div>
 				<div class="table-data">2</div>
 				<div class="table-data">0</div>
@@ -69,7 +75,9 @@
 				<div class="table-data">4</div>
 			</div>
 			<div class="table-row">
-				<div class="table-data">Dick</div>
+                <input type="checkbox" name="pend" value="2" unchecked><br>
+
+                <div class="table-data">Dick</div>
 				<div class="table-data">1</div>
 				<div class="table-data">1</div>
 				<div class="table-data">2</div>
@@ -77,6 +85,9 @@
 				<div class="table-data">5</div>
 			</div>
 			<div class="table-row">
+                <input type="checkbox" name="pend" value="3" unchecked><br>
+ 
+ 
 				<div class="table-data">Harry</div>
 				<div class="table-data">0</div>
 				<div class="table-data">2</div>
@@ -86,8 +97,13 @@
 			</div>
 		</div>	
 	</div>
+ 
 </div>
-    <a class="btn btn-full" href="pending.html">Pending Log</a>
+                
+    </form>            
+
+    <a class="btn btn-full" href="maintenance.html">Completed</a>
+    <a class="btn btn-full1" href="maintenance.html">Maintenance Log</a>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
     

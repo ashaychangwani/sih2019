@@ -30,9 +30,16 @@ h4 {
   min-height: 40vh;
 }
 
-.btn {
+
+.btn-full  {
     width: 10%;
-    margin: 45px 45px;
+    text-align: center;
+}
+
+.btn-full1 {
+    width: 20%;
+    padding: 40px;
+    text-align: center;
 }
 
 .btn:link,
@@ -50,7 +57,8 @@ h4 {
     background-color: #35393d;
     border: 1px solid #35393d;
     color: #fff;
-    margin-right: 15px;
+    margin-right:15px ;
+    
 }
 
 .btn:hover,
@@ -120,3 +128,4 @@ h4 {
 .filter__link.asc::after {
   content: '(asc)';
 }
+-
