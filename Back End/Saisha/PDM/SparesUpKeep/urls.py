@@ -5,4 +5,6 @@ from . import views
 
 urlpatterns = [
     path('', views.DisplayTable, name='SparesTable'),
+    path('PlaceOrder/', views.PlaceOrder, name='PlaceOrder'),
+    path('Invoice/', views.Invoice, name='Invoice'),
 ]

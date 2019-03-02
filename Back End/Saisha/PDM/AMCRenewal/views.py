@@ -25,4 +25,4 @@ def Form(request):
         print(MachineID)
         amc.save()
 
-    return HttpResponse(render(request,'amc/amcform.html'),{})
+    return HttpResponse(render(request,'amc/amcform.html'), {})
