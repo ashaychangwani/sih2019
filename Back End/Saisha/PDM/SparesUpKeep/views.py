@@ -9,4 +9,4 @@ def DisplayTable(request):
     context = {
         'spares' : spares,
     }
-    return HttpResponse(render(request, 'spares.html', context))
+    return HttpResponse(render(request, 'spares/spares.html', context))

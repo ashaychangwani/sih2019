@@ -1,0 +1,31 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+{% block extra_css %}
+   
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+{% endblock %}
+
+  <div class="container">
+  <h1>Spare Upkeep</h1>
+  <form>
+    <div class="form-group">
+      <label >Machine ID</label>
+      <input type="text" name="machine" id="machine" placeholder="Enter Machine ID">
+    </div>
+    <div class="form-group">
+      <label >Component Name</label>
+      <input type="text" name="component" id="component" placeholder="Enter Component Name">
+    </div>
+    <div class="form-group">
+      <label >Count</label>
+      <input type="number" name="count" id="count" placeholder="Enter Count">
+    </div>
+    <input type="submit" name="submit" value="Sign Up" onclick="alert('This is just a demo'); return false;">
+</form>
+</div>
+  
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+  
+{% endblock %}

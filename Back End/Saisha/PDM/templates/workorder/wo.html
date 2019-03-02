@@ -1,0 +1,49 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+	{% block extra_css %}
+   <!-- Specific template css here -->
+    <link rel="stylesheet" href="{% static 'css/amc.css' %}">
+	{% endblock %}
+
+    
+<div style="background-color: #f5f9f8; width: 100%; height=100%;">
+	<h4>Work Order</h4>
+</div>
+    
+    <div class="container">
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="wono" class="filter__link filter__link--number" href="#">WorkOrder Number</a></div>
+                <div class="header__item"><a id="des" class="filter__link filter__link--number" href="#">Description</a></div>
+                <div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+                <div class="header__item"><a id="start" class="filter__link filter__link--number" href="#">Start</a></div>
+                <div class="header__item"><a id="end" class="filter__link filter__link--number" href="#">End</a></div>
+                <div class="header__item"><a id="status" class="filter__link filter__link--number" href="#">Status</a></div>
+                <div class="header__item"><a id="cost" class="filter__link filter__link--number" href="#">Cost</a></div>
+            </div>
+            <div class="table-content">
+                {% for entry in amc %}
+                <div class="table-row">
+                    <div class="table-data">{{ entry.WorkOrderNum }}</div>
+                    <div class="table-data">{{ entry.Description }}</div>
+                    <div class="table-data">{{ entry.Date }}</div>
+                    <div class="table-data">{{ entry.Start }}</div>
+                    <div class="table-data">{{ entry.End }}</div>
+                    <div class="table-data">{{ entry.Status }}</div>
+                    <div class="table-data">{{ entry.Cost }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-full" href="http://127.0.0.1:8000/WorkOrder/WOForm/">Add WorkOrder</a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script  src="{% static 'js/wo.js' %}"></script>
+
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+
+{% endblock %}

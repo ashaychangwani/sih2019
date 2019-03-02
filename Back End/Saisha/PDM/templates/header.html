@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+{% load static %}
+
+    <meta charset="UTF-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'css/headersrch.css' %}">-->
+
+</head>
+
+<body>
+    <div class="bigboss">
+	    <div class="vnavbar header">
+            <div class="header">
+                <h1 class="logo">Prevention > Cure</h1>
+            </div>
+
+            <ul class= "nav-list" style="list-style-type:none;">
+                <li><a class="active" href="http://127.0.0.1:8000/Home/">Home</a></li>
+                    <div class="subnav">
+                    <a class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></a>
+                    <ion-icon class="icon2" name="arrow-dropdown"></ion-icon>
+                    <ul style="list-style-type:none;">
+                        <div class="subnav-content">
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/Assets/">Asset Register</a></li>
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/SparesUpKeep/">Spares Upkeep</a></li>
+                        </div>
+                    </ul>
+                    </div>
+                <li style="list-style-type:none;">
+                    <div class="subnav">
+                    <a class="subnavbtn">Accounting<i class="fa fa-caret-down"></i></a>
+                    <ion-icon class="icon3" name="arrow-dropdown"></ion-icon>
+                    <ul style="list-style-type:none;">
+                        <div class="subnav-content">
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/Invoice/">Invoice</a></li>
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/WorkOrder">Work Order</a></li>
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/AMCRenewal/">AMC Renewal</a></li>
+                        </div>
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="http://127.0.0.1:8000/MaintenanceLog/">Maintenance Log</a></li>
+                <li><a href="http://127.0.0.1:8000/Timetable/">Timetable</a></li>
+                <li class="iconss"><a style="float: right" href="http://127.0.0.1:8000/Account/"><ion-icon name="person"></ion-icon></a>
+                    <a style="float: left" href="http://127.0.0.1:8000/Notifications/"><ion-icon name="notifications"></ion-icon></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="vbody">
+        {% block content %}
+            {% block extra_css %}
+            {% endblock %}
+        {% endblock %}
+    </div>
+</body>
+</html>

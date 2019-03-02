@@ -13,7 +13,7 @@ def signup(request):
             except User.DoesNotExist:
                 user = User.objects.create_user(request.POST['username'], password=request.POST['password1'])
                 auth.login(request,user)
-                return redirect('Home')
+                return redirect("http://127.0.0.1:8000/")
         else:
             return HttpResponse(render(request, 'signup.html', {'error':'Passwords must match'}))
     else:
@@ -25,7 +25,7 @@ def login(request):
         user = auth.authenticate(username=request.POST['username'],password=request.POST['password'])
         if user is not None:
             auth.login(request, user)
-            return redirect('Home')
+            return redirect("http://www.google.com")
         else:
             return HttpResponse(render(request, 'login.html',{'error':'username or password is incorrect.'}))
     else:
@@ -34,4 +34,4 @@ def login(request):
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
-        return redirect('Home')
+        return redirect("http://www.google.com")

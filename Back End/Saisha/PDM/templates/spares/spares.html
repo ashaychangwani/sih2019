@@ -1,0 +1,35 @@
+
+{% extends 'header.html' %}
+
+{% block content %}
+
+	{% load static %}
+	{% block extra_css %}
+   <!-- Specific template css here -->
+   <link rel="stylesheet" href="{% static 'css/spares.css' %}">
+	{% endblock %}
+	<div style="background-color: #f5f9f8; width: 100%; height=100%;">
+        <h4>Spares Upkeep</h4>
+    </div>
+	<div class="container">
+		<div class="table">
+			<div class="table-header">
+				<div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+				<div class="header__item"><a id="component" class="filter__link filter__link--number" href="#">Component Name</a></div>
+				<div class="header__item"><a id="count" class="filter__link filter__link--number" href="#">Count</a></div>
+			</div>
+			<div class="table-content">
+				{% for entry in spares %}
+					<div class="table-row">
+						<div class="table-data">{{ entry.MachineID }}</div>
+							<div class="table-data">{{ entry.ComponentName }}</div>
+								<div class="table-data">{{ entry.Count }}</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{% static 'js/spares.js' %}"></script>
+
+{% endblock %}

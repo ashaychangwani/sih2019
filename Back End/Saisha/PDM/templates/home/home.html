@@ -1,0 +1,40 @@
+
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    {% block extra_css %}
+       <!-- Specific template css here -->
+       <link rel="stylesheet" href="{% static 'css/headersrch.css' %}">
+
+    {% endblock %}
+
+ <div class="abc" style="background-color: #f5f9f8; height=100%;">
+           <h4>Home</h4>
+ </div>
+<div class="incpad" style="background-color: #f5f9f8; width: 100%; height=100%;">
+    <div class="row1" style="background-color: #ffffff;">
+        <h2>Maintenance Services</h2>
+        <div class="col1" style="background-color: #ffffff;">
+            <h3>Annual</h3>
+            <p>An agreement with a service provider for repair and maintenance of property used by your company.</p>
+        </div>
+        <div class="col1" style="background-color: #ffffff;">
+            <h3>Scheduled</h3>
+            <p>A list of predetermined maintenance actions carried out at regular time intervals that are aimed at the prevention of breakdowns.</p>
+        </div>
+        <div class="col1" style="background-color: #ffffff;">
+            <h3>Predictive</h3>
+            <p>Techniques designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed.</p>
+        </div>
+
+        <img  src="{% static 'media/maint1.png' %}" height="416" wigth="717" class="center">
+
+
+    </div>
+</div>
+<script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+
+{% endblock %}
