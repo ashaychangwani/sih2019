@@ -7,7 +7,6 @@ Created on Thu Feb 28 10:13:46 2019
 
 import pandas as pd
 import numpy as np
-np.__version__
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import confusion_matrix,accuracy_score
 
@@ -19,22 +18,19 @@ import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 %matplotlib inline
 
-dataset_train=pd.read_csv('input/PM_train.txt',sep=' ',header=None).drop([26,27],axis=1)
-col_names = ['id','cycle','setting1','setting2','setting3','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18','s19','s20','s21']
-dataset_train.columns=col_names
-print('Shape of Train dataset: ',dataset_train.shape)
+dataset_train=pd.read_csv('NASATurbofan/train_FD001.csv')
 dataset_train.head()
 
 
-dataset_test=pd.read_csv('input/PM_test.txt',sep=' ',header=None).drop([26,27],axis=1)
-dataset_test.columns=col_names
-#dataset_test.head()
-print('Shape of Test dataset: ',dataset_train.shape)
+dataset_test=pd.read_csv('NASATurbofan/test_FD001.csv')
 dataset_test.head()
 
 
-pm_truth=pd.read_csv('input/PM_truth.txt',sep=' ',header=None).drop([1],axis=1)
-pm_truth.columns=['more']
+print('Shape of Training dataset: ',dataset_train.shape)
+print('Shape of Test dataset: ',dataset_test.shape)
+
+
+pm_truth=pd.read_csv('NASATurbofan/RUL_FD001.csv')
 pm_truth['id']=pm_truth.index+1
 pm_truth.head()
 
