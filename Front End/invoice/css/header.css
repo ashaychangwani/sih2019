@@ -26,14 +26,19 @@
 }
 
 .subnav .subnavbtn {
-  font-size: 16px;  
+  font-size: 14px;  
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 16px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  margin: 0;  
+  font-size: 14px; 
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.15px;
+  font-weight: 500;
+
 }
 
 .subnav-content a {
@@ -76,10 +81,13 @@ ion-icon:hover{
   padding-bottom: 10px;
   padding-left: 14px;
   text-decoration: none;
-  font-size: 14px; 
   line-height: 28px;
   border-radius: 2px;
+  font-size: 14px; 
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.15px;
+  font-weight: 500;
+
 }
 
 .header a.logo{

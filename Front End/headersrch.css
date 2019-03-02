@@ -1,86 +1,6 @@
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 1.15px;
+.body header{
+    margin: 0;
 }
-
-.logo{
-  font-family: 'Josefin Sans', sans-serif !important;
-  margin-bottom: -45px;
-  color: white;
-  font-weight: 150;
-  padding: 0 0 0 20px;
-  letter-spacing: 0.8px;
-  font-size: 40px;
-  margin-top: 10px;
-}
-
-.header{
-  overflow: hidden;
-  background-color: #35393d;
-  padding: 10px 10px 25px;
-}
-
-.header a{
-  float: left;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 10px;
-  padding-right: 14px;
-  padding-bottom: 10px;
-  padding-left: 14px;
-  text-decoration: none;
-  font-size: 14px; 
-  line-height: 28px;
-  border-radius: 2px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.header a.logo{
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover{
-    font-color: #fcd088;
-    border-bottom: 1px solid #fcd088;
-    line-height: 22px;
-}
-
-.header a.active {
-  color: #fcd088;
-}
-
-.header-right{
-  float: right;
-}
-
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
-}
-
-ion-icon {
-    font-size: 38px;
-    color: #f5f9f8;
-    margin-top: 5px;
-    padding: 0px 10px 18px 10px;
-}
-
-ion-icon:hover{
-    transition: 0.5s;
-    color: #fcd088;
-}
-
 
 h4 {
     color: #35393d;
@@ -89,10 +9,6 @@ h4 {
     font-size: 36px;
     font-weight: 550;
 }
-
-
-
-
 
 .row1{
 	margin: 80px;
@@ -147,11 +63,6 @@ p{
   font-size: 14px;
   color: #35393d;
   letter-spacing: 1.10px;
-}
-
-.incpad{
-	margin-top:-23px;
-	padding-top: 10px;
 }
 
 .center {
