@@ -2,13 +2,15 @@
 <html lang="en" >
 
 <head>
-    <!--    {% load static %}-->
+        {% load static %}
   <meta charset="UTF-8">
   <title></title>
   
     
+<!--
     <link rel="stylesheet" href="css/amc.css">
     <link rel="stylesheet" href="css/header.css">
+-->
     <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
   
     <link rel="stylesheet" href="{% static 'css/amc.css' %}">
@@ -103,11 +105,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
-
-    <script src="js/amc.js"></script>
-
-
-
+    
+<!--    <script src="js/amc.js"></script>-->
+    <script  src="{% static 'js/amc.js' %}"></script>
 
 </body>
 

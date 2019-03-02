@@ -2,10 +2,19 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="header.css">
-	<link rel="stylesheet" href="headersrch.css">
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+	
     <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/headersrch.css' %}">    
+<!--
+    <link rel="stylesheet" href="header.css">
+	<link rel="stylesheet" href="headersrch.css">
+-->
 </head>
 
 <body>
@@ -53,8 +62,13 @@
 				<h3>Predictive</h3>
 				<p>Techniques designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed.</p>
 			</div>
-			<img src="maint1.png" height="416" wigth="717" class="center">
-		</div>		
+            
+            <img  src="{% static 'media/maint1.png' %}" height="416" wigth="717" class="center"></img>
+            
+<!--			<img src="maint1.png" height="416" wigth="717" class="center">-->
+		
+        
+        </div>		
 	</div>
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 </body>

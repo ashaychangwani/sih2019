@@ -3,11 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
-<!--  {% load static %}-->
+  {% load static %}
   <title></title>
   
+<!--
       <link rel="stylesheet" href="css/spare.css">
       <link rel="stylesheet" href="css/header.css">
+-->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spare.css' %}">
+    
     <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
   
 </head>
@@ -73,13 +78,10 @@
     <a class="btn btn-full" href="../form/spareform.html">Add Spare</a>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <script  src="js/spare.js"></script>
-  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
-
-<!--    <script  src="{% static 'js/spare.js' %}"></script>-->
-
-
-
+    <script  src="{% static 'js/spare.js' %}"></script>
+<!--  <script  src="js/spare.js"></script>-->
+  
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 
 </body>
 

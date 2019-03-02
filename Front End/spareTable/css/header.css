@@ -1,3 +1,7 @@
+body header{
+    margin: 0;
+}
+
 * {box-sizing: border-box;}
 
 .logo{
@@ -14,7 +18,7 @@
 .subnav-content {
   display: none;
   position: absolute;
-  left: 0;
+  left: auto;
   background-color: #35393d;
   width: 100%;
   z-index: 1;

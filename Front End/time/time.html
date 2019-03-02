@@ -3,14 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
+
+    {% load static %}
+
   <title>Simple Calendar</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 
-      <link rel="stylesheet" href="css/time.css">
+<!--
+    <link rel="stylesheet" href="css/time.css">
     <link rel="stylesheet" href="css/header.css">
+-->
+    <link rel="stylesheet" href="{% static 'css/.css' %}">
+    <link rel="stylesheet" href="{% static 'css/time.css' %}">
+    
     <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
 
 
@@ -213,10 +221,10 @@ function fill_table(month, month_length, indexMonth) {
 </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.core.min.js"></script>
-
   
+    <script  src="{% static 'js/time.js' %}"></script>    
+<!--    <script  src="js/time.js"></script>-->
 
-    <script  src="js/time.js"></script>
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 
 
