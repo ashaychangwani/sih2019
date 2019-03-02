@@ -117,8 +117,7 @@ print(y_test.shape)
 nb_features =X_train.shape[2]
 timestamp=seq_length
 
-model3 = Sequential()
-"""
+model = Sequential()
 
 model.add(LSTM(input_shape=(timestamp, nb_features), units=100,return_sequences=True))
 model.add(Dropout(0.2))
@@ -130,17 +129,13 @@ model.add(Dense(units=1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 import tensorflow as tf
-with tf.device('/device:GPU:0'):
+with tf.device('/device:CPU:0'):
     model.fit(X_train, y_train, epochs=10, batch_size=200, validation_split=0.05, verbose=1,callbacks = [EarlyStopping(monitor='val_loss', min_delta=0, patience=0, verbose=0, mode='auto')])
 
-"""
-import keras
-model3=keras.models.load_model('model.h5')
-model3.summary()
 
 
 
-scores = model3.evaluate(X_train, y_train, verbose=1, batch_size=200)
+scores = model.evaluate(X_train, y_train, verbose=1, batch_size=200)
 print('Accurracy: {0:.2f}%'.format(scores[1]*100))
 
 
