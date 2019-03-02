@@ -1,17 +1,16 @@
-from datetime import date, datetime
-
 from django.db import models
 
 # Create your models here.
 
 class AMC(models.Model):
     MachineID = models.IntegerField()
-    Company = models.CharField(max_length=250, default="")
-    Category = models.CharField(max_length=250, default="")
-    Quantity = models.PositiveIntegerField(default=0)
-    FactoryID = models.PositiveIntegerField(default=0)
-    AMCCompany = models.CharField(max_length=250, default="")
-    ExpiryDate = models.DateField(default='2011-10-01')
+    Facility = models.CharField(max_length=250, default="", null=True)
+    Factory = models.CharField(max_length=250, default="", null=True)
+    ProductionLine = models.CharField(max_length=250, default="", null=True)
+    Frequency = models.CharField(max_length=200, default="", null=True)
+    Supplier = models.CharField(max_length=250, default="", null=True)
+    LastRenewal = models.DateField(default='2011-10-01')
+    Details = models.CharField(max_length=500, default="", null=True)
 
     def __str__(self):
-        return str(self.machineID) + " - " + str(self.FactoryID) + " - " + str(self.AMCCompany)
+        return str(self.MachineID) + " - " + str(self.Factory) + " - " + str(self.Supplier)

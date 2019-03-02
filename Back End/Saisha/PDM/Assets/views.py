@@ -17,11 +17,11 @@ def newAsset(request):
     print(FacilityName)
     asset = Asset(FacilityName=FacilityName, FactoryNum=FactoryNum, Prodline=Prodline, MachineID=MachineID, Name=Name)
     asset.save()
-    return HttpResponse(render(request,"NewAsset.html"),{})
+    return HttpResponse(render(request,"assets/NewAsset.html"),{})
 
 def assetDisplay(request):
     assetReg = Asset.objects.all()
     context = {
         'assetReg': assetReg,
     }
-    return HttpResponse(render(request, 'AssetDisplay.html', context))
+    return HttpResponse(render(request, 'assets/AssetDisplay.html', context))

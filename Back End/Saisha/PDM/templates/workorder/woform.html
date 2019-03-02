@@ -1,0 +1,47 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+{% block extra_css %}
+   
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+{% endblock %}
+
+
+  <div class="container">
+  <h1>Work Order</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Work Order No.</label>
+      <input type="number" name="wono" id="wono" placeholder="Enter W/o No">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" name="des" id="des" placeholder="Description">
+    </div>
+    <div class="form-group">
+      <label>Date Stamp</label>
+      <input type="time" name="start" id="date" placeholder="Enter Start Date">
+    </div>
+    <div class="form-group">
+      <label>Start Time</label>
+      <input type="time" name="start" id="start" placeholder="Enter Start Date">
+    </div>
+    <div class="form-group">
+      <label>End Time</label>
+      <input type="time" name="end" id="end" placeholder="Enter End Date">
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <input type="text" name="status" id="status" placeholder="Enter Status">
+    </div>
+    <div class="form-group">
+      <label>Cost</label>
+      <input type="number" name="cost" id="cost" placeholder="Enter Cost">
+    </div>
+    <input type="submit" name="submit" value="Submit">
+</form>
+</div>
+  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+{% endblock %}

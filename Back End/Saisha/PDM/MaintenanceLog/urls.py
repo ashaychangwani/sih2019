@@ -4,5 +4,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.maintenanceLog, name='maintenanceLog'),
+    path('MaintenanceLog', views.maintenanceLog, name='maintenanceLog'),
+    path('PendingLog', views.pendingLog, name='PendingLog'),
 ]
