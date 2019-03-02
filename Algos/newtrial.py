@@ -163,3 +163,4 @@ machine_id=3
 print('Probability that machine will fail within 30 days: {0:.2f}%'.format(prob_failure(machine_id)*100))
 
     
+model.save("model.h5")
