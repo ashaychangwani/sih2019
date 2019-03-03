@@ -4,16 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  
-    
       <link rel="stylesheet" href="css/asset.css">
       <link rel="stylesheet" href="css/header.css">
       <link rel="stylesheet" href="css/menu.css">
-    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet'>
   
 </head>
 
 <body>
+    <!--<div class="bigboss">
+	    <div class="vnavbar header">
+            <div class="header">
+                <h1 class="logo">Prevention > Cure</h1>
+            </div>
+
+            <ul class= "nav-list" style="list-style-type:none;">
+                <li><a class="active" href="http://127.0.0.1:8000/Home/">Home</a></li>
+                    <div class="subnav">
+                    <a class="subnavbtn">Inventory<i class="fa fa-caret-down"></i></a>
+                    <ion-icon class="icon2" name="arrow-dropdown"></ion-icon>
+                    <ul style="list-style-type:none;">
+                        <div class="subnav-content">
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/Assets/">Asset Register</a></li>
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/SparesUpKeep/">Spares Upkeep</a></li>
+                        </div>
+                    </ul>
+                    </div>
+                <li style="list-style-type:none;">
+                    <div class="subnav">
+                    <a class="subnavbtn">Accounting<i class="fa fa-caret-down"></i></a>
+                    <ion-icon class="icon3" name="arrow-dropdown"></ion-icon>
+                    <ul style="list-style-type:none;">
+                        <div class="subnav-content">
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/SparesUpKeep/Invoice/">Invoice</a></li>
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/WorkOrder">Work Order</a></li>
+                            <li><a class="subnavsux" href="http://127.0.0.1:8000/AMCRenewal/">AMC Renewal</a></li>
+                        </div>
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="http://127.0.0.1:8000/MaintenanceLog/">Maintenance Log</a></li>
+                <li><a href="http://127.0.0.1:8000/Timetable/">Timetable</a></li>
+                <li class="iconss"><a style="float: right" href="http://127.0.0.1:8000/Account/"><ion-icon name="person"></ion-icon></a>
+                    <a style="float: left" href="http://127.0.0.1:8000/Notifications/"><ion-icon name="notifications"></ion-icon></a></li>
+            </ul>
+        </div>
+    </div>-->
 
     <div id="accordian">
         <ul>
@@ -29,9 +65,9 @@
                                                 <li>
                                                     <a href="#">Production Line 1</a>
                                                         <ul>
-                                                            <li><a id="m1" href="#" onclick="reply_click(this.id)">Machine 1</a></li>
-                                                           <li><a  id="m2" ref="#" onclick="reply_click(this.id)">Machine 2</a></li>
-                                                            <li><a onclick="myFunction()" href="#">Machine 3</a></li>
+                                                            <li><a id="m1" href="#" onclick="myFunction()">Machine 1</a></li>
+                                                            <li><a id="m2" ref="#" onclick="myFunction()">Machine 2</a></li>
+                                                            <li><a id="m3" onclick="myFunction()" href="#">Machine 3</a></li>
                                                         </ul>
                                                 </li>
                                                 <li>
@@ -51,18 +87,16 @@
         </ul>
     </div>
     <div id="myDIV">
-        <div class="w3-bar w3-black">
-          <button class="w3-bar-item w3-button" id="btn-details" onclick="openCity('details', this.id)">Details</button>
-          <button class="w3-bar-item w3-button" id="btn-preventive" onclick="openCity('preventive', this.id)">Preventive Maintenance</button>
-          <button class="w3-bar-item w3-button" id="btn-history" onclick="openCity('history', this.id)">History</button>
+        <div id="tab" class="w3-bar w3-black">
+          <button class="w3-bar-item w3-button" id="btn-details" onclick="openDetails()">Details</button>
+          <button class="w3-bar-item w3-button" id="btn-preventive" onclick="openPreventive()">Preventive Maintenance</button>
+          <button class="w3-bar-item w3-button" id="btn-history" onclick="openHistory()">History</button>
         </div>
-
-        <div id="dets" class="w3-container city">
+        <div id="dets" class="w3-container tab">
           <h2 id="london">Test</h2>
           <p >London is the capital city of England.</p>
         </div>
-
-        <div id="preventive" class="w3-container city" style="display:none">
+        <div id="preventive" class="w3-container tab" style="display:none">
           <h2 id="paris"></h2>
           <div class="table">
             <div class="table-header">
@@ -94,7 +128,7 @@
             </div>
         </div>
 
-        <div id="history" class="w3-container city" style="display:none">
+        <div id="history" class="w3-container tab" style="display:none">
           <h2 id="tokyo"></h2>
           <div class="table">
             <div class="table-header">
@@ -107,25 +141,25 @@
             </div>
             <div class="table-content">	
                 <div class="table-row">		
-                    <div class="row1 table-data">a</div>
-                    <div class="row2 table-data">2</div>
-                    <div class="row3 table-data">3</div>
-                    <div class="row4 table-data">4</div>
-                    <div class="row5 table-data">5</div>
-                    <div class="row6 table-data">6</div>
+                    <div class="table-data">a</div>
+                    <div class="table-data">2</div>
+                    <div class="table-data">3</div>
+                    <div class="table-data">4</div>
+                    <div class="table-data">5</div>
+                    <div class="table-data">6</div>
                 </div>
                 <div class="table-row">		
-                    <div class="row1 table-data">7</div>
-                    <div class="row2 table-data">8</div>
-                    <div class="row3 table-data">9</div>
-                    <div class="row4 table-data">10</div>
-                    <div class="row5 table-data">11</div>
-                    <div class="row6 table-data">11</div>
+                    <div class="table-data">7</div>
+                    <div class="table-data">8</div>
+                    <div class="table-data">9</div>
+                    <div class="table-data">10</div>
+                    <div class="table-data">11</div>
+                    <div class="table-data">11</div>
                 </div>
             </div>	
             </div>
         </div>
-    </div>
+        </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
