@@ -1,0 +1,26 @@
+{% extends 'timetable/base.html' %}
+
+
+{% block content1 %}
+<div class="clearfix">
+
+	<script>
+		function getDate(){
+			var d = document.getElementById("date").value;
+			window.location="http://127.0.0.1:8000/Timetable/?month="+d;
+		}
+	</script>
+
+	<label>Select Month and Year :</label>
+	<input type="month" id="date">
+	<input type="button"  value="Go!" onclick="getDate()">
+	<br>
+	<a class="btn btn-info left" href="{% url 'cal:calendar' %}?{{ prev_month }}"> Previous Month </a>
+	<a class="btn btn-info right" href="{% url 'cal:calendar' %}?{{ next_month }}"> Next Month </a>
+	<a class="btn btn-info right" href="{% url 'cal:event_new' %}"> New Event </a>
+	<br>
+</div>
+
+
+{{ calendar }}
+{% endblock %}

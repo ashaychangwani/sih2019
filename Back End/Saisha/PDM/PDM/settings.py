@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'WorkOrder.apps.WorkordersConfig',
     'Account.apps.AccountConfig',
     'Home.apps.HomeConfig',
-    #'Timetable.apps.TimetableConfig',
+    'Timetable.apps.TimetableConfig',
     'AMCRenewal.apps.AmcrenewalConfig',
     'Scheduling.apps.SchedulingConfig',
 ]

@@ -27,7 +27,7 @@
 		<div class="table-content">
 			{% for entry in pendingLog %}
 				<div class="table-row">
-					<input type="checkbox">
+					<div class="table-data"><form method="POST"> <input id="c1" type="checkbox" value="0"></form></div>
 					<div class="table-data">{{ entry.Name }}</div>
 					<div class="table-data">{{ entry.MachineID }}</div>
 					<div class="table-data">{{ entry.DateStamp }}</div>
@@ -39,9 +39,19 @@
 		</div>
 	</div>
 	<div class="container"><a class="btn btn-full" href="http://127.0.0.1:8000/MaintenanceLog/MaintenanceLog">Pending Log</a></div>
+	<br>
+	<div class="container"><a class="btn btn-full" onClick="assign()" href="http://127.0.0.1:8000/MaintenanceLog/MaintenanceLog">Completed Checked Tasks</a></div>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+	<script>
+		function assign()
+		{
+			checkBox = document.getElementById("c1");
+			if(checkBox.checked == true)
+				return {% checkBox %}
 
+		}
+	</script>
 	<script  src="{% static 'js/maintenance.js' %}"></script>
 </div>
 

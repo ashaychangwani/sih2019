@@ -21,6 +21,11 @@ body{
   border-bottom-right-radius:4px;
 }
 
+#form{
+margin-top:40px;
+margin-botton:40px;
+}
+
 .container h1, p{
   text-align:center;
 }
