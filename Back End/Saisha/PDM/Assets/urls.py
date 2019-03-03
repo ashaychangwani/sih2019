@@ -4,7 +4,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('NewAsset/', views.newAsset, name='NewAsset'),
-    path('AssetDisplay/', views.assetDisplay, name='assetDisplay'),
+    path('NewAsset/', views.newAsset1, name='NewAsset'),
+    path('AssetDisplay/', views.assetDisplay1, name='assetDisplay'),
 ]
 

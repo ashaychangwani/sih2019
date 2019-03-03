@@ -17,3 +17,4 @@ class Asset(models.Model):
 
     def __str__(self):
         return str(self.MachineID) + " - " + self.Name
+

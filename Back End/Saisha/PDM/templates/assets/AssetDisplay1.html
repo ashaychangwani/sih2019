@@ -1,0 +1,232 @@
+
+
+
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+	{% block extra_css %}
+   <!-- Specific template css here -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+</style>
+{% endblock %}
+
+    <!--
+    <div id="accordian1">
+        <ul>
+            <li>
+                <h3><a href="#"><i class="fa fa-lg fa-tasks"></i>Facilities</a></h3>
+                    <ul>
+                        <li>
+                            <a href="#">Mumbai</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Factory 1</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Production Line 1</a>
+                                                        <ul>
+                                                            <li><a id="m1" href="#" onclick="myFunction()">Machine 1</a></li>
+                                                            <li><a id="m2" ref="#" onclick="myFunction()">Machine 2</a></li>
+                                                            <li><a id="m3" onclick="myFunction()" href="#">Machine 3</a></li>
+                                                        </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Production Line 2</a>
+                                                        <ul>
+                                                            <li><a onclick="myFunction()">Machine 1</a></li>
+                                                            <li><a onclick="myFunction()">Machine 2</a></li>
+                                                            <li><a onclick="myFunction()">Machine 3</a></li>
+                                                        </ul>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+            </li>
+        </ul>
+    </div> -->
+
+<!--{% for facility in facilities %}
+<p href="">{{ facility.FacilityName }}</p>
+{% for factory in factories %}
+                         <p>{{ factory.FactoryNum }}</p>
+                            {% if factory.FacilityName == facility.FacilityName %}
+                            <p>{{ factory.FactoryNum }}</p>
+                            <ul><li><a href="#">{{ factory }}</a></li></ul>
+                            {% endif %}
+                            {% for prodlin in prodlines %}
+                                 <ul><li><a href="#">{{ prodlin }}</a></li></ul>
+                                    {% for machine in machines %}
+                                         <ul><li><a href="#" onclick="myFunction()">{{ machine }}</a></li></ul>
+                                    {% endfor %}
+                            {% endfor %}
+                    {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>-->
+
+<div class="container">
+
+    <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Facility Name
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        {% for facility in facilities %}
+        <li class="dropdown-submenu "><a class="test" tabindex="-1" href="#" tabindex="-1" href="#">{{ facility.FacilityName }}</a>
+            {% for factory in factories %}
+                <ul class="dropdown-menu">
+                    {% ifequal factory.FacilityNum facility.FacilityNum %}
+                        <ul>
+                             <li class="dropdown-submenu "><a class="test" tabindex="-1" href="#" tabindex="-1" href="#">{{ facility.FacilityName }}</a>
+                                {% for prodline in prodline %}
+                                    <ul class="dropdown-menu">
+                                       &lt;!&ndash; {% ifequal factory.FacilityName facility.FacilityName %}
+                                            <ul>
+
+                                            </ul>
+                                        {% endifequal %}&ndash;&gt;
+                                    </ul>
+                             </li>
+                         {% endfor %}
+                        </ul>
+                    {% endifequal %}
+                  </li>
+                </ul>
+            {% endfor %}
+      </li>
+        {% endfor %}
+    </ul>
+
+
+  </div>
+
+    <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Factory Name
+    <span class="caret"></span></button>
+
+    <ul class="dropdown-menu">
+        {% for factory in factories %}
+        <li class="dropdown-submenu "><a class="test" tabindex="-1" href="#" tabindex="-1" href="#">{{ factory.FactoryNum }}</a>
+            {% for factory in factories %}
+                <!--<ul class="dropdown-menu">
+                    {% ifequal factory.FacilityName facility.FacilityName %}
+                        <ul>
+                             <li class="dropdown-submenu "><a class="test" tabindex="-1" href="#" tabindex="-1" href="#">{{ facility.FacilityName }}</a>
+                                {% for prodline in prodline %}
+                                    <ul class="dropdown-menu">
+                                       &lt;!&ndash; {% ifequal factory.FacilityName facility.FacilityName %}
+                                            <ul>
+
+                                            </ul>
+                                        {% endifequal %}&ndash;&gt;
+                                    </ul>
+                             </li>
+                         {% endfor %}
+                        </ul>
+                    {% endifequal %}
+                  </li>
+                </ul>-->
+            {% endfor %}
+      </li>
+        {% endfor %}
+    </ul>
+</div>
+</div>
+
+
+    <div id="myDIV">
+        <div id="tab" class="w3-bar w3-black">
+          <button class="w3-bar-item w3-button" id="btn-details" onclick="openDetails(this.id)">Details</button>
+          <button class="w3-bar-item w3-button" id="btn-preventive" onclick="openPreventive(this.id)">Preventive Maintenance</button>
+          <button class="w3-bar-item w3-button" id="btn-history" onclick="openHistory(this.id)">History</button>
+        </div>
+        <div id="dets" class="w3-container tab">
+          <h2 id="london">Test</h2>
+          <p >London is the capital city of England.</p>
+        </div>
+
+        <!-- Maintenance Log -->
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">Name</a></div>
+                <div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+                <div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+                <div class="header__item"><a id="time" class="filter__link filter__link--number" href="#">Time</a></div>
+                <div class="header__item"><a id="details" class="filter__link filter__link--number" href="#">Details</a></div>
+                <div class="header__item"><a id="comment" class="filter__link filter__link--number" href="#">Comments</a></div>
+            </div>
+            <div class="table-content">
+                {% for entry in maintenanceLog %}
+                    <div class="table-row">
+                        <div class="table-data">{{ entry.Name }}</div>
+                        <div class="table-data">{{ entry.MachineID }}</div>
+                        <div class="table-data">{{ entry.DateStamp }}</div>
+                        <div class="table-data">{{ entry.TimeStamp }}</div>
+                        <div class="table-data">{{ entry.Details }}</div>
+                        <div class="table-data">{{ entry.Comments }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+	    </div>
+
+        <!-- Past Log -->
+        <div id="history" class="w3-container tab" style="display:none">
+          <h2 id="tokyo"></h2>
+          <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name1" class="filter__link" href="#">Name</a></div>
+                <div class="header__item"><a id="mid1" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+                <div class="header__item"><a id="date1" class="filter__link filter__link--number" href="#">Date</a></div>
+                <div class="header__item"><a id="time1" class="filter__link filter__link--number" href="#">Time</a></div>
+                <div class="header__item"><a id="details1" class="filter__link filter__link--number" href="#">Details</a></div>
+                <div class="header__item"><a id="comment1" class="filter__link filter__link--number" href="#">Comments</a></div>
+            </div>
+            <div class="table-content">
+                {% for entry in maintenanceLog %}
+                    <div class="table-row">
+                        <div class="table-data">{{ entry.Name }}</div>
+                        <div class="table-data">{{ entry.MachineID }}</div>
+                        <div class="table-data">{{ entry.DateStamp }}</div>
+                        <div class="table-data">{{ entry.TimeStamp }}</div>
+                        <div class="table-data">{{ entry.Details }}</div>
+                        <div class="table-data">{{ entry.Comments }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+	    </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+
+    <script src="{% static 'js/asset.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.dropdown-submenu a.test').on("click", function(e){
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+          });
+        });
+</script>
+ {% endblock %}

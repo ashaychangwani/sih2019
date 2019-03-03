@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+
+#import PDM.MaintenanceLog.MaintenanceLog
 from .models import Asset
+from django.apps import apps
 
 # Create your views here.
 # Take user requests and respond in some kind of way
@@ -25,3 +28,24 @@ def assetDisplay(request):
         'assetReg': assetReg,
     }
     return HttpResponse(render(request, 'assets/AssetDisplay.html', context))
+
+def assetDisplay1(request):
+    log = apps.get_model('MaintenanceLog', 'MaintenanceLog')
+    assetReg = Asset.objects.all()#
+    facilities = Asset.objects.all().distinct()#values("FacilityName").distinct()#filter(Facility="Mumbai")
+    factories = Asset.objects.all().distinct()#values("FactoryNum").distinct()#.filter(Facility="Mumbai")
+    prodline = Asset.objects.all().distinct()#values("Prodline").distinct()#.filter(Facility="Mumbai")
+    machines = Asset.objects.all()#values("MachineID")#.filter(Facility="Mumbai")
+
+    #log = MaintenanceLog.objects.all()
+    context = {
+        'facilities': facilities,
+        'factories': factories,
+        'prodline': prodline,
+        'machines': machines,
+        'assetReg': assetReg,
+    }
+    return HttpResponse(render(request, 'assets/AssetDisplay1.html', context))
+
+def newAsset1(request):
+    return
