@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'background_task',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,9 +42,11 @@ INSTALLED_APPS = [
     'MaintenanceLog.apps.MaintenancelogConfig',
     'SparesUpKeep.apps.SparesupkeepConfig',
     'WorkOrder.apps.WorkordersConfig',
-    #'Home.apps.HomeConfig',
-    #'Timetable.apps.TimetableConfig',
+    'Account.apps.AccountConfig',
+    'Home.apps.HomeConfig',
+    'Timetable.apps.TimetableConfig',
     'AMCRenewal.apps.AmcrenewalConfig',
+    'Scheduling.apps.SchedulingConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,5 +126,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'PDM/static'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'

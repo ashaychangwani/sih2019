@@ -1,0 +1,47 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+{% block extra_css %}
+   
+<link rel="stylesheet" href="{% static 'css/maintenance.css' %}">
+
+{% endblock %}
+
+
+<div style="background-color: #f5f9f8; width: 100%; height=100%;">
+        <h4>Maintenance Log</h4>
+</div>
+    
+<div class="container">
+	
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="name" class="filter__link" href="#">Name</a></div>
+			<div class="header__item"><a id="mid" class="filter__link filter__link--number" href="#">Machine ID</a></div>
+			<div class="header__item"><a id="date" class="filter__link filter__link--number" href="#">Date</a></div>
+			<div class="header__item"><a id="time" class="filter__link filter__link--number" href="#">Time</a></div>
+			<div class="header__item"><a id="details" class="filter__link filter__link--number" href="#">Details</a></div>
+			<div class="header__item"><a id="comment" class="filter__link filter__link--number" href="#">Comments</a></div>
+		</div>
+		<div class="table-content">
+			{% for entry in maintenanceLog %}
+				<div class="table-row">
+					<div class="table-data">{{ entry.Name }}</div>
+					<div class="table-data">{{ entry.MachineID }}</div>
+					<div class="table-data">{{ entry.DateStamp }}</div>
+					<div class="table-data">{{ entry.TimeStamp }}</div>
+					<div class="table-data">{{ entry.Details }}</div>
+					<div class="table-data">{{ entry.Comments }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="container"><a class="btn btn-full" href="http://127.0.0.1:8000/MaintenanceLog/PendingLog">Pending Log</a></div>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+
+	<script  src="{% static 'js/maintenance.js' %}"></script>
+</div>
+<!--    <script  src="js/maintenance.js"></script>-->
+
+{% endblock %}

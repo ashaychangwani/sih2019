@@ -1,0 +1,56 @@
+{% extends 'header.html' %}
+{% block content %}
+
+{% load static %}
+
+  {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+  {% endblock %}
+
+    <div class="container" id="form">
+      <h1>AMC</h1>
+      <form method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label>Machine ID</label>
+            <input type="number" name="mid" id="mid" placeholder="Enter Machine ID">
+          </div>
+          <div class="form-group">
+            <label>Facility</label>
+            <input type="text" name="facility" id="facility" placeholder="Facility">
+          </div>
+          <div class="form-group">
+            <label>Factory</label>
+            <input type="text" name="fac" id="fac" placeholder="Factory">
+          </div>
+          <div class="form-group">
+            <label>Production Line</label>
+            <input type="text" name="prod" id="prod" placeholder="Production Line">
+          </div>
+          <div class="form-group">
+            <label>Supplier</label>
+            <input type="text" name="sup" id="sup" placeholder="Supplier">
+          </div>
+          <div class="form-group">
+            <label>Last Renewal Date</label>
+            <input type="date" name="date" id="date" placeholder="Last Renewal Date">
+          </div>
+          <div class="form-group">
+            <label>Frequency</label>
+            <select name="freq" id="freq">
+              <option value="1 month">1 month</option>
+              <option value="3 months">3 months</option>
+              <option value="6 months">6 months</option>
+              <option value="12 months">12 months</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Details</label>
+            <input type="text" name="details" id="details" placeholder="Details">
+          </div>
+          <input type="SUBMIT" name="submit" value="Submit">
+    </form>
+    </div>
+  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+
+{% endblock %}
